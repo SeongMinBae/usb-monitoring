@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane fx:id="allRoot" blendMode="SRC_OVER" cache="false" cacheHint="SPEED" prefHeight="614.5976731445262" prefWidth="846.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="USBWatch.ClientRootController">
+  <!-- TODO Add Nodes -->
+  <center>
+    <Pane prefHeight="200.0" prefWidth="200.0">
+      <children>
+        <ImageView fitHeight="625.625" fitWidth="1001.0" layoutX="0.0" layoutY="0.0" pickOnBounds="true" preserveRatio="true">
+          <image>
+            <Image url="@../img/backgroundImg.jpg" />
+          </image>
+        </ImageView>
+        <AnchorPane minHeight="487.0" prefHeight="649.0" prefWidth="846.0">
+          <children>
+            <Slider fx:id="slider" blendMode="SRC_OVER" layoutX="10.0" layoutY="52.0" max="1.0" minWidth="2.0" opacity="1.0" orientation="VERTICAL" prefHeight="515.0" prefWidth="14.0" showTickLabels="false" showTickMarks="false" snapToTicks="false" value="1.0">
+              <effect>
+                <Lighting>
+                  <bumpInput>
+                    <Shadow />
+                  </bumpInput>
+                  <light>
+                    <javafx.scene.effect.Light.Distant color="#d9edf7" />
+                  </light>
+                </Lighting>
+              </effect>
+            </Slider>
+            <SplitPane fx:id="allList" blendMode="SRC_OVER" cache="true" cacheHint="DEFAULT" depthTest="INHERIT" disable="false" dividerPositions="0.5065359477124183" focusTraversable="true" layoutX="628.0" opacity="0.7" orientation="VERTICAL" pickOnBounds="true" prefHeight="613.59765625" prefWidth="218.0" AnchorPane.topAnchor="1.0">
+              <items>
+                <AnchorPane id="upList" disable="false" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                  <children>
+                    <ListView fx:id="dirList" disable="false" layoutX="-1.0" layoutY="31.0" orientation="VERTICAL" prefHeight="276.0" prefWidth="218.0" />
+                    <Text fontSmoothingType="LCD" layoutX="84.0" layoutY="19.0" scaleX="1.0" scaleY="0.999992838159364" strokeType="OUTSIDE" strokeWidth="0.0" text="디렉터리">
+                      <font>
+                        <Font name="Ebrima" size="12.0" fx:id="x3" />
+                      </font>
+                    </Text>
+                  </children>
+                </AnchorPane>
+                <AnchorPane id="downList" minHeight="0.0" minWidth="0.0" prefHeight="311.0" prefWidth="216.0">
+                  <children>
+                    <Text font="$x3" fontSmoothingType="LCD" layoutX="96.0" layoutY="19.0" scaleX="1.0" scaleY="1.000000487775861" strokeType="OUTSIDE" strokeWidth="0.0" text="파일" />
+                    <ListView fx:id="fList" disable="false" prefHeight="270.0" prefWidth="218.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="30.0" />
+                    <LineChart id="LineChart" layoutX="-294.0" layoutY="-15.0" prefHeight="259.0000915527344" prefWidth="260.0">
+                      <xAxis>
+                        <CategoryAxis side="BOTTOM" />
+                      </xAxis>
+                      <yAxis>
+                        <NumberAxis side="LEFT" />
+                      </yAxis>
+                    </LineChart>
+                  </children>
+                </AnchorPane>
+              </items>
+            </SplitPane>
+            <TextArea fx:id="textArea" blendMode="SRC_OVER" cache="true" cacheHint="DEFAULT" disable="false" editable="false" layoutX="31.0" layoutY="52.0" opacity="0.7" prefHeight="480.0" prefWidth="265.0" wrapText="true" />
+            <Text fill="WHITE" layoutX="366.0" layoutY="598.0" opacity="0.7" strokeType="OUTSIDE" strokeWidth="0.0" text="ⓒ 2020. 충북대학교 openlab동아리" />
+            <Button fx:id="clear" defaultButton="true" disable="false" font="$x3" layoutX="31.0" layoutY="532.0" mnemonicParsing="false" opacity="0.7" prefHeight="34.453125" prefWidth="265.0" text="CLEAR" textFill="BLACK">
+              <effect>
+                <ColorAdjust brightness="-0.2557142857142857" saturation="-1.0" />
+              </effect>
+            </Button>
+            <Text id="title" fill="WHITE" layoutX="24.0" layoutY="37.0" opacity="0.7" scaleX="0.999998888888917" scaleY="1.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Openlab">
+              <font>
+                <Font name="DotumChe" size="30.0" />
+              </font>
+            </Text>
+            <FlowPane fx:id="fpBottomPane" layoutX="330.0" layoutY="53.0" prefHeight="258.0506896972656" prefWidth="266.0001220703125">
+              <children>
+                <ComboBox fx:id="cbCameraOptions" minWidth="46.0" opacity="0.7" prefWidth="266.0">
+                  <effect>
+                    <ColorAdjust brightness="-0.25" />
+                  </effect>
+                  <items>
+                    <FXCollections fx:factory="observableArrayList">
+                      <String fx:value="Item 1" />
+                      <String fx:value="Item 2" />
+                      <String fx:value="Item 3" />
+                    </FXCollections>
+                  </items>
+                </ComboBox>
+                <BorderPane fx:id="bpWebCamPaneHolder" minWidth="265.0" prefHeight="200.0" prefWidth="265.0">
+                  <center>
+                    <Pane prefHeight="200.0" prefWidth="200.0">
+                      <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0c009900" height="200.0" layoutX="0.0" layoutY="0.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="10.0" width="265.0" />
+                        <ImageView fx:id="imgWebCamCapturedImage" fitHeight="200.0" fitWidth="253.9998779296875" layoutX="0.0" layoutY="0.0" pickOnBounds="true" preserveRatio="false" smooth="false">
+                          <image>
+                            <Image url="@../img/icon.png" />
+                          </image>
+                        </ImageView>
+                      </children>
+                    </Pane>
+                  </center>
+                </BorderPane>
+                <Button fx:id="camCapture" disable="true" mnemonicParsing="false" opacity="0.7" prefWidth="265.0" text="캠 캡처" visible="false">
+                  <effect>
+                    <ColorAdjust brightness="-0.25" />
+                  </effect>
+                </Button>
+                <Button fx:id="btnStopCamera" disable="true" mnemonicParsing="false" opacity="0.0" prefWidth="48.0" text="stopp" />
+                <Button fx:id="btnStartCamera" disable="true" minWidth="39.0" mnemonicParsing="false" opacity="0.0" prefWidth="90.0" text="start" />
+                <Button fx:id="btnDisposeCamera" disable="true" mnemonicParsing="false" opacity="0.0" prefWidth="82.71875" text="dispose" />
+              </children>
+            </FlowPane>
+            <ImageView fx:id="usbIcon" fitHeight="44.25" fitWidth="59.0" layoutX="571.0" layoutY="533.0" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="@../img/usb_red.png" />
+              </image>
+            </ImageView>
+            <Button fx:id="option" layoutX="332.0" layoutY="437.0" mnemonicParsing="false" opacity="0.7" prefHeight="35.0" prefWidth="261.0" text="프로세스 종료 시도 방지 옵션">
+              <effect>
+                <ColorAdjust brightness="-0.25" />
+              </effect>
+            </Button>
+            <Button fx:id="capture" layoutX="332.0" layoutY="345.0" mnemonicParsing="false" opacity="0.7" prefHeight="35.0" prefWidth="260.4375" text="스크린 캡처">
+              <effect>
+                <ColorAdjust brightness="-0.25" />
+              </effect>
+            </Button>
+            <Button fx:id="mailOption" layoutX="332.0" layoutY="484.0" mnemonicParsing="false" opacity="0.7" prefHeight="35.0" prefWidth="260.0" text="메일/클라우드 전송 방지 옵션">
+              <effect>
+                <ColorAdjust brightness="-0.25" />
+              </effect>
+            </Button>
+            <Button fx:id="normalOption" layoutX="332.0" layoutY="390.0" mnemonicParsing="false" opacity="0.7" prefHeight="35.0" prefWidth="260.0" text="일반 옵션">
+              <effect>
+                <ColorAdjust brightness="-0.25" />
+              </effect>
+            </Button>
+            <TextField fx:id="focus" editable="true" layoutX="10.0" layoutY="567.0" prefWidth="14.0" visible="false" />
+          </children>
+        </AnchorPane>
+      </children>
+    </Pane>
+  </center>
+</BorderPane>

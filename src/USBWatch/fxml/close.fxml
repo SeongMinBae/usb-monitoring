@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="80.0" prefWidth="301.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+  <!-- TODO Add Nodes -->
+  <children>
+    <Pane layoutX="0.0" layoutY="3.0" prefHeight="77.0" prefWidth="301.0">
+      <children>
+        <ImageView fitHeight="195.625" fitWidth="313.0" layoutX="0.0" layoutY="-10.0" opacity="0.7" pickOnBounds="true" preserveRatio="true">
+          <image>
+            <Image url="@../img/backgroundImg.jpg" />
+          </image>
+        </ImageView>
+        <TextField id="closePwd" layoutX="24.0" layoutY="42.0" opacity="0.7" prefWidth="200.0" />
+        <Button id="closeOK" defaultButton="true" layoutX="234.0" layoutY="42.0" mnemonicParsing="false" opacity="0.7" text="확인" textFill="BLACK">
+          <effect>
+            <ColorAdjust brightness="-0.25" saturation="-1.0" />
+          </effect>
+          <font>
+            <Font name="Ebrima" size="12.0" fx:id="x1" />
+          </font>
+        </Button>
+      </children>
+    </Pane>
+    <Text id="txt" fill="WHITE" font="$x1" fontSmoothingType="LCD" layoutX="24.0" layoutY="27.0" opacity="0.7" strokeType="OUTSIDE" strokeWidth="0.0" text="비밀번호를 입력해주세요" />
+  </children>
+</AnchorPane>

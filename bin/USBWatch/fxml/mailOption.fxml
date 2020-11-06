@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="anchorPane" minHeight="56.59765625" prefHeight="160.99997792968497" prefWidth="439.171875" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+  <!-- TODO Add Nodes -->
+  <children>
+    <Pane layoutX="0.0" layoutY="1.0" prefHeight="200.0" prefWidth="200.0">
+      <children>
+        <ImageView fitHeight="281.35739074124336" fitWidth="450.1718444824219" layoutX="0.0" layoutY="-11.0" opacity="0.7" pickOnBounds="true" preserveRatio="true">
+          <image>
+            <Image url="@../img/backgroundImg.jpg" />
+          </image>
+        </ImageView>
+        <Text fill="WHITE" fontSmoothingType="LCD" layoutX="155.0" layoutY="33.0" opacity="0.7" scaleX="1.0" scaleY="1.0" strokeType="OUTSIDE" strokeWidth="0.0" text="메일/클라우드 전송 방지 옵션">
+          <font>
+            <Font name="Ebrima" size="12.0" fx:id="x1" />
+          </font>
+        </Text>
+        <ToggleButton fx:id="mailOnOffBtn" font="$x1" layoutX="348.0" layoutY="18.0" mnemonicParsing="false" opacity="0.7" selected="false" text="켜기" textOverrun="ELLIPSIS">
+          <effect>
+            <ColorAdjust brightness="-0.25" hue="-0.015873015873015817" saturation="-1.0" />
+          </effect>
+        </ToggleButton>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" cache="true" cacheHint="DEFAULT" depthTest="INHERIT" height="35.0" layoutX="18.0" layoutY="11.0" mouseTransparent="true" smooth="true" stroke="BLACK" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="CENTERED" width="406.67181396484375">
+          <fill>
+            <Color blue="1.000" green="1.000" opacity="0.000" red="1.000" fx:id="x2" />
+          </fill>
+        </Rectangle>
+        <CheckBox fx:id="mailShow1" layoutX="37.0" layoutY="86.0" mnemonicParsing="false" opacity="0.7" text="마우스 비정상 동작" textFill="WHITE" visible="false" />
+        <CheckBox fx:id="mailShow2" layoutX="37.0" layoutY="115.0" mnemonicParsing="false" opacity="0.7" prefHeight="16.294830322265625" text="경고문구 출력" textFill="WHITE" visible="false" />
+        <Button fx:id="mailBtn" defaultButton="true" font="$x1" layoutX="348.0" layoutY="110.0" mnemonicParsing="false" opacity="0.7" text="확인" textFill="BLACK" visible="false">
+          <effect>
+            <ColorAdjust brightness="-0.25396825396825395" saturation="-1.0" />
+          </effect>
+        </Button>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="$x2" height="88.50000762939453" layoutX="17.0" layoutY="58.0" mouseTransparent="true" stroke="BLACK" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="CENTERED" width="406.67181396484375" />
+        <TextField fx:id="mailWarningTxt" layoutX="155.0" layoutY="110.0" opacity="0.7" prefWidth="178.0" promptText="경고문을 입력하세요" visible="false" />
+        <Text fx:id="mailWarningTxtCheck" fill="WHITE" font="$x1" fontSmoothingType="LCD" layoutX="26.0" layoutY="161.0" opacity="0.7" scaleX="1.0E8" scaleY="1.0" strokeType="OUTSIDE" strokeWidth="0.0" text="a" visible="false" />
+        <Text fill="WHITE" layoutX="22.0" layoutY="74.0" opacity="0.7" strokeType="OUTSIDE" strokeWidth="0.0" text="한 번 작동이 끝난 후에는 프로그램을 재시작하여야 재사용이 가능합니다." />
+      </children>
+    </Pane>
+  </children>
+</AnchorPane>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="296.0" prefWidth="304.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+  <!-- TODO Add Nodes -->
+  <children>
+    <Pane layoutX="0.0" layoutY="4.0" prefHeight="200.0" prefWidth="200.0">
+      <children>
+        <ImageView fitHeight="305.625" fitWidth="489.0" layoutX="0.0" layoutY="-6.0" opacity="0.7" pickOnBounds="true" preserveRatio="true">
+          <image>
+            <Image url="@../img/backgroundImg.jpg" />
+          </image>
+        </ImageView>
+        <Text fill="WHITE" fontSmoothingType="LCD" layoutX="11.0" layoutY="42.0" opacity="0.7" scaleX="0.9188006128255636" scaleY="1.0" strokeType="OUTSIDE" strokeWidth="0.0" text="드라이브 명 :">
+          <font>
+            <Font name="Ebrima" size="12.0" fx:id="x1" />
+          </font>
+        </Text>
+        <Text id="info" fill="WHITE" font="$x1" layoutX="85.0" layoutY="42.0" opacity="0.7" strokeType="OUTSIDE" strokeWidth="0.0" text="" />
+        <Text fill="WHITE" font="$x1" fontSmoothingType="LCD" layoutX="14.0" layoutY="21.0" opacity="0.7" strokeType="OUTSIDE" strokeWidth="0.0" text="실행상태 :" />
+        <Text fx:id="executeState" fill="WHITE" font="$x1" layoutX="72.0" layoutY="21.0" opacity="0.7" strokeType="OUTSIDE" strokeWidth="0.0" text="" />
+        <Button fx:id="detailLook" defaultButton="true" font="$x1" layoutX="210.0" layoutY="18.0" mnemonicParsing="false" opacity="0.7" text="자세히보기" textAlignment="LEFT" textFill="BLACK" textOverrun="ELLIPSIS" underline="false" wrapText="false">
+          <effect>
+            <ColorAdjust brightness="-0.25" hue="-0.01587301587301604" saturation="-1.0" />
+          </effect>
+        </Button>
+        <PieChart id="pieChart" labelLineLength="20.0" layoutX="15.0" layoutY="56.0" legendSide="TOP" minHeight="110.0" minWidth="120.0" opacity="0.7" prefHeight="238.0" prefWidth="289.0" snapToPixel="true" titleSide="TOP" />
+      </children>
+    </Pane>
+  </children>
+</AnchorPane>
